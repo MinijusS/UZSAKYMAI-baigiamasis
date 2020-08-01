@@ -14,6 +14,7 @@ $factory->define(OrderedItems::class, function (Faker $faker) {
             return factory(\App\Product::class)->create()->id;
         },
         'quantity' => $faker->randomDigitNot(0),
-        'price' => $faker->randomDigitNot(0)
+        'sauce_id' => $faker->randomDigitNot(0),
+        'size' => $faker->numberBetween($min = 1, $max = 2)
     ];
 });

@@ -27,7 +27,7 @@
             <tr v-for="product in filtered">
                 <td>{{product.name}}</td>
                 <td>{{product.description}}</td>
-                <td>{{categories[product.category_id].name}}</td>
+                <td>{{categories[product.category_id] ? categories[product.category_id].name : 'Nera kategorijos'}}</td>
                 <td>{{product.price_small}}€</td>
                 <td>{{product.price_big}}€</td>
                 <td><img :src="product.photo" style="width:50px;height:50px"></td>

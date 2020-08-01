@@ -20,9 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('home');
 Route::resource('orders', 'OrderController');
-//Route::post('/orders/{order}/done', 'OrderController@done')->name('orders.done');
-//Route::post('/orders/{order}/revert', 'OrderController@revert')->name('orders.revert');
 Route::resource('products', 'ProductController');
 Route::resource('categories', 'CategoryController');

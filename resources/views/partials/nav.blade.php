@@ -28,6 +28,9 @@
                     <a class="nav-link" href="{{ route('products.index') }}">
                         {{ __('Patiekalai') }}
                     </a>
+                    <a class="nav-link" href="{{ route('home') }}">
+                        {{ __('Statistika') }}
+                    </a>
                 @endauth
 
             <!-- Authentication Links -->

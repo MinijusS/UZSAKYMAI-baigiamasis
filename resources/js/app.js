@@ -13,13 +13,14 @@ window.Vue = require('vue');
  * Vue components. It will recursively scan this directory for the Vue
  * components and automatically register them with their "basename".
  *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ * Eg. ./components/Dashboard.vue -> <example-component></example-component>
  */
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('dashboard', require('./components/Dashboard.vue').default);
+Vue.component('product-list', require('./components/ProductList.vue').default);
 Vue.component('order-card', require('./components/OrderCard.vue').default);
 Vue.component('sort-buttons', require('./components/SortButtons.vue').default);
 Vue.component('orders', require('./components/Orders.vue').default);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Order;
+use App\OrderedItems;
 use App\Product;
 use App\Sauce;
 use http\Env\Request;
@@ -13,7 +14,7 @@ class ApiController extends Controller
 {
     public function index()
     {
-        return response(['orders' => Order::all()->jsonSerialize(), 'sauces' => Sauce::all()->jsonSerialize()], Response::HTTP_OK);
+        return response(['orders' => Order::all()->jsonSerialize(), 'sauces' => Sauce::all()->jsonSerialize(), 'orderedItems' => OrderedItems::all()->jsonSerialize()], Response::HTTP_OK);
     }
 
     public function productIndex()

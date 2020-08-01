@@ -207,7 +207,7 @@ class ProductController extends Controller
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        $imageName = time().'.'.$request->photo->extension();
+        $imageName = time() . '.' . $request->photo->extension();
 
         $request->photo->move(public_path('images'), $imageName);
 
@@ -269,15 +269,18 @@ class ProductController extends Controller
             'description' => 'required|string',
             'price_small' => 'required|numeric',
             'price_big' => 'required|numeric',
-            'category_id' => 'required|numeric',
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'category_id' => 'required|numeric'
         ]);
 
-        $imageName = time().'.'.$request->photo->extension();
+        if (isset($request->photo)) {
+            $imageName = time() . '.' . $request->photo->extension();
 
-        $request->photo->move(public_path('images'), $imageName);
+            $request->photo->move(public_path('images'), $imageName);
 
-        $validatedData['photo'] = 'images/' . $imageName;
+            $validatedData['photo'] = 'images/' . $imageName;
+        } else {
+            $validatedData['photo'] = $product->photo;
+        }
 
         $product->update($validatedData);
 

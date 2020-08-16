@@ -1,15 +1,15 @@
 <template>
     <div class="card">
         <div class="card-header">
-            <span>Redaguoti uzsakyma</span>
-            <button class="btn btn-outline-danger" @click="clear">Isvalyti</button>
+            <span>Redaguoti užsakymą</span>
+            <button class="btn btn-outline-danger" @click="clear">Išvalyti</button>
         </div>
         <form class="card-body order-products" :action="/orders/ + order.id" method="post">
             <input type="hidden" name="_method" value="PUT">
             <input type="hidden" name="_token" :value="csrf">
             <input type="hidden" name="product_count" :value="input_count.length">
             <div class="order-info">
-                <h3>Pagrindine uzsakymo informacija</h3>
+                <h3>Pagrindinė užsakymo informacija</h3>
                 <div class="info-row" v-for="(input, index) in input_count" :key="input">
                     <select class="select-css" :name="'quantity-' +index" id="quantity">
                         <option v-for="quantity in 20" :value="quantity" :selected="quantity == input_count[index].quantity ? 'true' : ''">{{quantity}}</option>
@@ -31,7 +31,7 @@
 
             </div>
             <div class="order-details">
-                <h3>Papildoma uzsakymo informacija</h3>
+                <h3>Papildoma užsakymo informacija</h3>
                 <div class="inputs">
                     <div>
                         <label for="address">Adresas</label>
@@ -46,10 +46,10 @@
                     <div>
                         <label for="additional">Papildoma informacija</label>
                         <textarea class="select-css" id="additional" name="additional"
-                                  placeholder="(Nebutina)">{{order.additional }}</textarea>
+                                  placeholder="(Nebūtina)">{{order.additional }}</textarea>
                     </div>
                     <div>
-                        <label>Padarysime uz.</label>
+                        <label>Padarysime už.</label>
                         <select class="select-css" name="end_time">
                             <option selected disabled>-</option>
                             <option value="5">5min</option>

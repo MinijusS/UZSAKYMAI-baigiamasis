@@ -31,6 +31,9 @@
                     <a class="nav-link" href="{{ route('home') }}">
                         {{ __('Statistika') }}
                     </a>
+                    <a class="nav-link" href="{{ url('/') }}">
+                        {{ __('Pagrindinis') }}
+                    </a>
                 @endauth
 
             <!-- Authentication Links -->

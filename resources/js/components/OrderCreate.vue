@@ -1,14 +1,14 @@
 <template>
     <div class="card">
         <div class="card-header">
-            <span>Sukurti uzsakyma</span>
-            <button class="btn btn-outline-danger" @click="clear">Isvalyti</button>
+            <span>Sukurti užsakymą</span>
+            <button class="btn btn-outline-danger" @click="clear">Išvalyti</button>
         </div>
         <form class="card-body order-products" action="/orders" method="post">
             <input type="hidden" name="_token" :value="csrf">
             <input type="hidden" name="product_count" :value="input_count.length">
             <div class="order-info">
-                <h3>Pagrindine uzsakymo informacija</h3>
+                <h3>Pagrindinė užsakymo informacija</h3>
                 <div class="info-row" v-for="(input, index) in input_count" :key="input">
                     <select class="select-css" :name="'quantity-' +index" id="quantity">
                         <option v-for="quantity in 20" :value="quantity">{{quantity}}</option>
@@ -30,7 +30,7 @@
 
             </div>
             <div class="order-details">
-                <h3>Papildoma uzsakymo informacija</h3>
+                <h3>Papildoma užsakymo informacija</h3>
                 <div class="inputs">
                     <div>
                         <label for="address">Adresas</label>
@@ -44,10 +44,10 @@
                     <div>
                         <label for="additional">Papildoma informacija</label>
                         <textarea class="select-css" id="additional" name="additional"
-                                  placeholder="(Nebutina)"></textarea>
+                                  placeholder="(Nebūtina)"></textarea>
                     </div>
                     <div>
-                        <label>Padarysime uz.</label>
+                        <label>Padarysime už.</label>
                         <select class="select-css" name="end_time">
                             <option selected disabled>-</option>
                             <option value="5">5min</option>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <button class="btn btn-outline-primary add-product" @click.prevent="addProduct">Pridėti patiekalą</button>
-            <button class="btn btn-success create-order">Sukurti uzsakyma</button>
+            <button class="btn btn-success create-order">Sukurti užsakyma</button>
         </form>
     </div>
 </template>

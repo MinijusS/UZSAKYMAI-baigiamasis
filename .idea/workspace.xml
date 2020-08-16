@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="03dad205-d08c-4749-9921-211c24fbc53c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/OrderCreate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/OrderCreate.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/OrderEdit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/OrderEdit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +202,7 @@
       <workItem from="1596009578351" duration="42575000" />
       <workItem from="1596238138814" duration="11312000" />
       <workItem from="1596321562597" duration="658000" />
-      <workItem from="1596356058536" duration="2769000" />
+      <workItem from="1596356058536" duration="4167000" />
     </task>
     <servers />
   </component>
@@ -238,11 +240,11 @@
     <state x="362" y="-893" width="782" height="729" key="find.popup/0.23.1280.725/-278.-1057.1920.1057@-278.-1057.1920.1057" timestamp="1596357714426" />
     <state x="427" y="135" width="683" height="501" key="find.popup/0.23.1280.725@0.23.1280.725" timestamp="1595250228703" />
     <state x="362" y="-901" width="782" height="694" key="find.popup/0.23.1280.777/-278.-1057.1920.1005@-278.-1057.1920.1005" timestamp="1596288182433" />
-    <state x="180" y="-986" width="1005" height="986" key="search.everywhere.popup" timestamp="1596357338528">
-      <screen x="-278" y="-1057" width="1920" height="1057" />
+    <state x="305" y="72" width="670" height="676" key="search.everywhere.popup" timestamp="1596451812897">
+      <screen x="0" y="23" width="1280" height="725" />
     </state>
     <state x="180" y="-986" width="1005" height="986" key="search.everywhere.popup/0.23.1280.725/-278.-1057.1920.1057@-278.-1057.1920.1057" timestamp="1596357338528" />
-    <state x="305" y="72" width="670" height="676" key="search.everywhere.popup/0.23.1280.725@0.23.1280.725" timestamp="1595339280742" />
+    <state x="305" y="72" width="670" height="676" key="search.everywhere.popup/0.23.1280.725@0.23.1280.725" timestamp="1596451812897" />
     <state x="180" y="-989" width="1005" height="938" key="search.everywhere.popup/0.23.1280.777/-278.-1057.1920.1005@-278.-1057.1920.1005" timestamp="1596288600377" />
   </component>
 </project>

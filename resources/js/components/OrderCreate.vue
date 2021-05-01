@@ -33,9 +33,16 @@
                 <h3>Papildoma užsakymo informacija</h3>
                 <div class="inputs">
                     <div>
-                        <label for="address">Adresas</label>
-                        <input class="select-css" id="address" name="address" type="text"
-                               placeholder="Vilniaus g. 112B">
+                        <label for="address-input">Adresas</label>
+                        <app-places
+                            :type="type"
+                            :api-key="apiKey"
+                            :app-id="appId"
+                            :key="`${appId}-${apiKey}`"
+                            @change="suggestion = $event.suggestion"
+                        />
+<!--                        <input class="select-css" id="address-input" name="address" type="search"-->
+<!--                               placeholder="Vilniaus g. 112B">-->
                     </div>
                     <div>
                         <label for="tel">Tel. Nr.</label>
@@ -72,7 +79,10 @@
 </template>
 
 <script>
+    import AppPlaces from './Places';
+
     export default {
+        components: {AppPlaces},
         props: [],
         data: function () {
             return {
@@ -80,6 +90,10 @@
                 products: [],
                 sauces: [],
                 input_count: [{}],
+                suggestion: undefined,
+                appId: undefined,
+                apiKey: undefined,
+                type: 'city',
             }
         },
         methods: {
@@ -104,7 +118,12 @@
             }
         },
         mounted() {
+            this.input = document.querySelector('#address-input');
+            this.apiKey = '2f3bd72ce7d1f525bf6cda08856264ea';
+            this.appId = 'plNSA2QC9M7S';
             this.read();
         }
     }
 </script>
+
+

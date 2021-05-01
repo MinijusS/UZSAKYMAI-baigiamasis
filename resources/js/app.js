@@ -28,6 +28,7 @@ Vue.component('order-create', require('./components/OrderCreate.vue').default);
 Vue.component('order-edit', require('./components/OrderEdit.vue').default);
 Vue.component('search-bar', require('./components/SearchBar.vue').default);
 Vue.component('product-table', require('./components/ProductTable.vue').default);
+Vue.component('app-places', require('./components/Places.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

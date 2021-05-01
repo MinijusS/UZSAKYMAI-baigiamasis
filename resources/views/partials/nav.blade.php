@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top">
     <div class="container">
-        <p>Labas</p>
         <a class="navbar-brand" href="{{ url('/orders') }}">
             <img src="{{ asset('images/logo.png') }}" class="brand-logo">
         </a>
